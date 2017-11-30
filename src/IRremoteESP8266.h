@@ -144,6 +144,9 @@
 #define DECODE_MIDEA         true
 #define SEND_MIDEA           true
 
+#define DECODE_LASERTAG      true
+#define SEND_LASERTAG        true
+
 #if (DECODE_ARGO || DECODE_DAIKIN || DECODE_FUJITSU_AC || DECODE_GREE || \
      DECODE_KELVINATOR || DECODE_MITSUBISHI_AC || DECODE_TOSHIBA_AC || \
      DECODE_TROTEC)
@@ -192,7 +195,8 @@ enum decode_type_t {
   GLOBALCACHE,  // Technically not a protocol, but an encoding.
   TOSHIBA_AC,
   FUJITSU_AC,
-  MIDEA
+  MIDEA,
+  LASERTAG
 };
 
 // Message lengths & required repeat values
@@ -258,6 +262,8 @@ enum decode_type_t {
 #define NIKAI_BITS                  24U
 #define MIDEA_BITS                  48U
 #define MIDEA_MIN_REPEAT             0U
+#define LASERTAG_BITS               13U
+#define LASERTAG_MIN_REPEAT          0U
 
 // Turn on Debugging information by uncommenting the following line.
 // #define DEBUG 1

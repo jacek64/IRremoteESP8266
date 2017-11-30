@@ -230,6 +230,7 @@ void handleRoot() {
         "<option value='10'>LG</option>"
         "<option value='34'>Midea</option>"
         "<option value='12'>Mitsubishi</option>"
+        "<option value='35'>Lasertag</option>"
         "<option selected='selected' value='3'>NEC</option>"  // Default
         "<option value='29'>Nikai</option>"
         "<option value='5'>Panasonic</option>"

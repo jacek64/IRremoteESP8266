@@ -169,9 +169,10 @@ class IRrecv {
                         uint16_t nbits = MITSUBISHI_BITS,
                         bool strict = true);
 #endif
-#if (DECODE_RC5 || DECODE_R6)
+#if (DECODE_RC5 || DECODE_R6 || DECODE_LASERTAG)
   int16_t getRClevel(decode_results *results, uint16_t *offset, uint16_t *used,
-                     uint16_t bitTime);
+                     uint16_t bitTime, uint8_t tolerance = TOLERANCE,
+                     int16_t excess = MARK_EXCESS);
 #endif
 #if DECODE_RC5
   bool decodeRC5(decode_results *results, uint16_t nbits = RC5X_BITS,
@@ -247,6 +248,10 @@ class IRrecv {
 #if DECODE_MIDEA
   bool decodeMidea(decode_results *results, uint16_t nbits = MIDEA_BITS,
                    bool strict = true);
+#endif
+#if DECODE_LASERTAG
+  bool decodeLasertag(decode_results *results, uint16_t nbits = LASERTAG_BITS,
+                      bool strict = true);
 #endif
 };
 

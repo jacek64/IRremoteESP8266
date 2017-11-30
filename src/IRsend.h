@@ -194,6 +194,10 @@ class IRsend {
   void sendMidea(uint64_t data, uint16_t nbits = MIDEA_BITS,
                  uint16_t repeat = MIDEA_MIN_REPEAT);
 #endif
+#if SEND_LASERTAG
+  void sendLasertag(uint64_t data, uint16_t nbits = LASERTAG_BITS,
+                    uint16_t repeat = LASERTAG_MIN_REPEAT);
+#endif
 
  protected:
 #ifdef UNIT_TEST
